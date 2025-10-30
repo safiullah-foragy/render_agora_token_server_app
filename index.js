@@ -1,15 +1,11 @@
-// index.js
-import express from "express";
-import cors from "cors";
-import pkg from "agora-access-token";
-const { RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole } = pkg;
-
+const express = require("express");
+const cors = require("cors");
+const { RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole } = require("agora-access-token");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 🔒 use environment variables
 const APP_ID = process.env.APP_ID;
 const APP_CERTIFICATE = process.env.APP_CERTIFICATE;
 
