@@ -1,12 +1,9 @@
 // index.js
 import express from "express";
 import cors from "cors";
-import {
-  RtcTokenBuilder,
-  RtcRole,
-  RtmTokenBuilder,
-  RtmRole,
-} from "agora-access-token";
+import pkg from "agora-access-token";
+const { RtcTokenBuilder, RtcRole, RtmTokenBuilder, RtmRole } = pkg;
+
 
 const app = express();
 app.use(cors());
